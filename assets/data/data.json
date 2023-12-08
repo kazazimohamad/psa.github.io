@@ -3,7 +3,7 @@
     {
       "id": 1,
       "type": "choice",
-      "songSnippetPath": "/assets/mp3/Soroosh-Hamoon-Tik-Tak.mp3",
+      "songSnippetPath": "/sher-yadet-nare/assets/mp3/Soroosh-Hamoon-Tik-Tak.mp3",
       "startTime": 10,
       "duration": 6,
       "lyricsDisplay": ["آهای همیشه شیطون", "دلمو میبری آسون", "آهای نباشی تو لک"],
