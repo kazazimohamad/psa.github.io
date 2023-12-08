@@ -1,0 +1,19 @@
+{
+  "questions" : [
+    {
+      "id": 1,
+      "type": "choice",
+      "songSnippetPath": "/assets/mp3/Soroosh-Hamoon-Tik-Tak.mp3",
+      "startTime": 10,
+      "duration": 6,
+      "lyricsDisplay": ["آهای همیشه شیطون", "دلمو میبری آسون", "آهای نباشی تو لک"],
+      "options": ["اصلا تویی با نمک", "آتیش پاره ی با نمک", "عزیز دله با نمک"],
+      "correctOptionIndex": 1,
+      "points": 5,
+      "lifelineUsed": [false, false, false]
+    }
+
+  ]
+}
+
+
