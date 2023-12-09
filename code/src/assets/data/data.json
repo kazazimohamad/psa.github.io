@@ -5,14 +5,52 @@
       "type": "choice",
       "songSnippetPath": "/assets/mp3/Soroosh-Hamoon-Tik-Tak.mp3",
       "startTime": 10,
-      "duration": 6,
+      "duration": 3,
       "lyricsDisplay": ["آهای همیشه شیطون", "دلمو میبری آسون", "آهای نباشی تو لک"],
       "options": ["اصلا تویی با نمک", "آتیش پاره ی با نمک", "عزیز دله با نمک"],
       "correctOptionIndex": 1,
       "points": 5,
       "lifelineUsed": [false, false, false]
+    },
+    {
+      "id": 1,
+      "type": "choice",
+      "songSnippetPath":"/assets/mp3/f1.mp3",
+      "startTime": 0,
+      "duration": 81,
+      "lyricsDisplay": ["خنده ات شکره لب هات عسله","مثل گل شدی امشب","غروبا، چراغا میشه روشن خیابون"],
+      "options": ["عاشقا، مثل ما میان از خونه بیرون", "text2", "text3", "text3"],
+      "correctOptionIndex": 1,
+      "correctTextAnswer": "عاشقا، مثل ما میان از خونه بیرون",
+      "points": 5,
+      "lifelineUsed": [false]
+    },
+    {
+      "id": 2,
+      "type": "choice",
+      "songSnippetPath":"/assets/mp3/2-1.mp3",
+      "startTime": 28,
+      "duration": 71,
+      "lyricsDisplay": ["text", "text1"],
+      "options": ["text1", "text2", "text3", "text3"],
+      "correctOptionIndex": 1,
+      "correctTextAnswer": "string",
+      "points": 15,
+      "lifelineUsed": [false]
+    },
+    {
+      "id": 3,
+      "type": "choice",
+      "songSnippetPath":"/assets/mp3/4-1.mp3",
+      "startTime": 35,
+      "duration": 71,
+      "lyricsDisplay": ["text", "text1"],
+      "options": ["text1", "text2", "text3", "text3"],
+      "correctOptionIndex": 1,
+      "correctTextAnswer": "string",
+      "points": 15,
+      "lifelineUsed": [false]
     }
-
   ]
 }
 

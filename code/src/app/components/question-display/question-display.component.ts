@@ -2,7 +2,7 @@ import {Component, Input, Output, EventEmitter, ElementRef, ViewChild} from '@an
 import {Question} from "../../core/interfaces/question";
 import {AudioService} from "../../services/audio.service";
 import {FormsModule} from "@angular/forms";
-import {NgForOf, NgIf} from "@angular/common"; // A service you should create to manage audio playback
+import {NgClass, NgForOf, NgIf} from "@angular/common"; // A service you should create to manage audio playback
 
 @Component({
   selector: 'app-question-display',
@@ -12,22 +12,28 @@ import {NgForOf, NgIf} from "@angular/common"; // A service you should create to
   imports: [
     FormsModule,
     NgIf,
-    NgForOf
+    NgForOf,
+    NgClass
   ]
 })
 export class QuestionDisplayComponent {
   @Input() question!: Question;
   @Output() scoreUpdate = new EventEmitter<number>();
   @Output() timeOut = new EventEmitter<void>();
+  @Output() nextQuestionEmit = new EventEmitter<void>();
   @Output() textAnswerSubmit = new EventEmitter<string>();
+
 
   @ViewChild('audioPlayer', {static: false}) audioPlayer!: ElementRef;
 
 
   answerSelected: boolean = false;
-  countdown: number = 0;
+  countdown: number | null = null;
   interval: any;
   textAnswer: string = '';
+  selectedAnswer: number | null= null;
+  isQuestionAnswered: boolean = false;
+  isWinOverlayDisplay: boolean = false;
 
   constructor(private audioService: AudioService) {}
 
@@ -55,7 +61,7 @@ export class QuestionDisplayComponent {
   startCountdown(duration: number) {
     this.countdown = duration;
     this.interval = setInterval(() => {
-      this.countdown--;
+      this.countdown = this.countdown as number - 1;
       if (this.countdown <= 0) {
         clearInterval(this.interval);
         this.timeOut.emit();
@@ -63,15 +69,22 @@ export class QuestionDisplayComponent {
     }, 1000);
   }
 
-  onOptionSelected(optionIndex: number) {
+  onOptionSelected(optionIndex: number ) {
+    this.selectedAnswer = optionIndex;
+  }
+
+  onOptionSubmit(optionIndex: number | null) {
     clearInterval(this.interval); // Stop countdown
     this.answerSelected = true;
 
     if (optionIndex === this.question.correctOptionIndex) {
       this.scoreUpdate.emit(this.question.points);
+      this.isWinOverlayDisplay = true;
     } else {
       this.scoreUpdate.emit(0); // Send zero points if wrong answer
     }
+
+    this.isQuestionAnswered = true;
   }
 
   onTextAnswerSubmit() {
@@ -94,7 +107,7 @@ export class QuestionDisplayComponent {
     audio.pause();
     // audio.currentTime = 0; // Reset the playback to the beginning
     // Note: The 'onended' event will trigger here as we pause the audio
-    this.startCountdown(30)
+    this.startCountdown(5)
   }
 
   playPlayback() {
@@ -106,5 +119,15 @@ export class QuestionDisplayComponent {
     // Set a timeout to stop playback when the snippet duration ends
     setTimeout(() => this.stopPlayback(audio), this.question.duration * 1000);
 
+  }
+
+  nextQuestion() {
+    const audio = this.audioPlayer.nativeElement;
+    this.stopPlayback(audio);
+    this.nextQuestionEmit.emit();
+  }
+
+  hideWinOverlay() {
+    this.isWinOverlayDisplay = false;
   }
 }

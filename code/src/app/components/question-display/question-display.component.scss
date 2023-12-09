@@ -1,0 +1,35 @@
+.lyrics{
+  text-align: right;
+}
+
+
+.play-btn {
+  width: 50px;
+  height: auto;
+
+}
+
+.play-btn__svg{
+  transition: 1s;
+  fill:#7c7c7c;
+  opacity: .5;
+}
+
+.play-btn:hover .play-btn__svg {
+  fill: #a41d33;
+  opacity: 1;
+}
+.option{
+  font-size: 2rem;
+}
+
+.score{
+  background-color: #9D0035 !important;
+  color: white ;
+}
+.win-overlay{
+  background-image: url("/assets/images/win.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}

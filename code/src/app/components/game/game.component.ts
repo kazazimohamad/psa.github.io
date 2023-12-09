@@ -23,7 +23,7 @@ export class GameComponent {
   currentLevel: number = 1;
   questions!: Question[]; // This should be populated with your actual questions data
   currentQuestion!: Question;
-  lifelines: boolean[] = [false, false, false]; // Tracks which lifelines have been used
+  lifelines: boolean[] = [false]; // Tracks which lifelines have been used
 
   constructor(
     private dataService: DataService
@@ -49,12 +49,12 @@ export class GameComponent {
   updateScore(points: number): void {
     this.score += points;
     // Move to next level, if there are more levels
-    if (this.currentLevel < this.questions.length) {
+    /*if (this.currentLevel < this.questions.length) {
       this.currentLevel++;
       this.currentQuestion = this.questions[this.currentLevel - 1];
     } else {
       // Handle end of game
-    }
+    }*/
   }
 
 
@@ -63,6 +63,9 @@ export class GameComponent {
     if (currentQuestion.type === 'text' && answer.trim().toLowerCase() === currentQuestion.correctTextAnswer?.trim().toLowerCase()) {
       this.score += currentQuestion.points;
     }
+  }
+
+  nextQuestionHandler() {
     this.moveToNextLevel();
   }
 

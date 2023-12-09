@@ -1,34 +1,52 @@
-<div class="app-component">
-  <h1>Guess the Song!</h1>
+<div class="top-nav w-100" >
+  test
+</div>
+<div class="game-container w-100 h-100">
+  <div class="text-white">
 
-  <!-- Display the current score and level -->
-  <div class="score-section">
-    <p>Score: {{ score }}</p>
-    <p>Level: {{ currentLevel }}</p>
-  </div>
+    <div class="d-flex justify-content-between border-bottom">
 
-  <div class="lifelines" *ngIf="currentQuestion">
-    <button
-      *ngFor="let lifeline of lifelines; let i = index"
+      <h1 class="">Guess the Song!</h1>
+
+      <div>
+        <div class="lifelines" *ngIf="currentQuestion">
+          <button class="bg-white rounded-pill text-main px-3 hover-main h2"
+            *ngFor="let lifeline of lifelines; let i = index"
             [disabled]="lifeline || currentQuestion.type === 'text'"
-      (click)="useLifeline(i)">
-      Use lifeline to remove {{ i + 1 }} option(s)
-    </button>
-  </div>
+            (click)="useLifeline(i)">
+            HELP <img src="assets/images/help-icon.png" height="45" class="me-3"> 1
+          </button>
+        </div>
 
 
-  <!-- Render the question display component -->
-  <app-question-display
-    *ngIf="currentQuestion"
-    [question]="currentQuestion"
-    (scoreUpdate)="updateScore($event)"
-    (textAnswerSubmit)="onAnswerSubmitted($event)">
-  </app-question-display>
+      </div>
+
+      <!-- Display the current score and level -->
+      <div class="score-section  d-flex ">
+        <h2 class="px-3 level rounded-start-pill">Score: {{ score }}</h2>
+        <h2 class="px-3 score rounded-end-pill">Level: {{ currentLevel }}</h2>
+      </div>
+    </div>
 
 
-  <!-- Displayed when the game ends -->
-  <div class="end-of-game" *ngIf="questions && currentLevel > questions.length">
-    <p>End of the game! Your final score is {{ score }}.</p>
-    <!-- Optionally, add a button to restart the game -->
+
+
+    <!-- Render the question display component -->
+    <app-question-display
+      *ngIf="currentQuestion"
+      [question]="currentQuestion"
+      (scoreUpdate)="updateScore($event)"
+      (textAnswerSubmit)="onAnswerSubmitted($event)"
+      (nextQuestionEmit)="nextQuestionHandler()"
+    >
+    </app-question-display>
+
+
+    <!-- Displayed when the game ends -->
+    <div class="end-of-game" *ngIf="questions && currentLevel > questions.length">
+      <p>End of the game! Your final score is {{ score }}.</p>
+      <!-- Optionally, add a button to restart the game -->
+    </div>
   </div>
 </div>
+

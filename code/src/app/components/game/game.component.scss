@@ -1,0 +1,25 @@
+.top-nav {
+  height: 70px;
+  background-image: url("/assets/images/yalda-2-header.jpg");
+  background-size: contain;
+}
+.game-container {
+  background-color: #332B5C;
+}
+
+.level{
+  background-color: #19B0B4;
+  color: #9D0035;
+}
+
+.score{
+  background-color: #9D0035;
+  color: white;
+}
+.text-main {
+  color: #332B5C;
+}
+.hover-main:hover {
+  background-color: #332B5C !important;
+  color: white;
+}
