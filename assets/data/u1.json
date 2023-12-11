@@ -1,0 +1,58 @@
+{
+  "questions" : [
+    {
+      "id": 1,
+      "type": "choice",
+      "songSnippetPath":"/assets/mp3/1-mp3/1-1.mp3",
+      "startTime": 0,
+      "duration": 81,
+      "lyricsDisplay": ["خنده ات شکره لب هات عسله","مثل گل شدی امشب","غروبا، چراغا میشه روشن خیابون"],
+      "options": ["عاشقا، مثل ما میان از خونه بیرون", "text2", "text3", "text3"],
+      "correctOptionIndex": 0,
+      "correctTextAnswer": "عاشقا، مثل ما میان از خونه بیرون",
+      "points": 5,
+      "lifelineUsed": [false, false, false]
+    },
+    {
+      "id": 2,
+      "type": "choice",
+      "songSnippetPath":"1-2.mp3",
+      "startTime": 0,
+      "duration": 70,
+      "lyricsDisplay": ["بیا کنارم ساقه ی بهاره", "رو فرش برگ و پولک ستاره" , "خمار شعرم میشکنه پیش تو "],
+      "options": ["عجب شرابی نفسِ تو داره", "text2", "text3", "text3"],
+      "correctOptionIndex": 1,
+      "correctTextAnswer": "string",
+      "points": 10,
+      "lifelineUsed": [false]
+    },
+    {
+      "id": 3,
+      "type": "choice",
+      "songSnippetPath":"/assets/mp3/1-mp3/1-2.mp3",
+      "startTime": 0,
+      "duration": 70,
+      "lyricsDisplay": ["بیا کنارم ساقه ی بهاره", "رو فرش برگ و پولک ستاره" , "خمار شعرم میشکنه پیش تو "],
+      "options": ["عجب شرابی نفسِ تو داره", "text2", "text3", "text3"],
+      "correctOptionIndex": 1,
+      "correctTextAnswer": "string",
+      "points": 10,
+      "lifelineUsed": [false]
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "songSnippetPath":"/assets/mp3/1-mp3/1-4.mp3",
+      "startTime": 35,
+      "duration": 80,
+      "lyricsDisplay": ["تو خلوت شبونه نذر و دعا میکنم","خدای آسمونو یه دم صدا میکنم", "نکنه که با نگاهش یه وقت فریبم بده"],
+      "options": ["دلی که به من سپرده دست رقیبم بده", "text2", "text3", "text3"],
+      "correctOptionIndex": 1,
+      "correctTextAnswer":["دلی که به من سپرده دست رقیبم بده"],
+      "points": 15,
+      "lifelineUsed": [false]
+    }
+  ]
+}
+
+
