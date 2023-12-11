@@ -22,7 +22,14 @@
 .option{
   font-size: 2rem;
 }
-
+.countdown{
+  width: 110px;
+  height: 110px;
+  min-width: 110px;
+  min-height: 110px;
+  display: inline-block;
+  font-size: 80px;
+}
 .score{
   background-color: #9D0035 !important;
   color: white ;

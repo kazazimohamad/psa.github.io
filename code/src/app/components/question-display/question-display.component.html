@@ -4,12 +4,13 @@
     <div class="col-6">
       <div class="d-flex justify-content-between">
         <!-- This would need the implementation of the AudioService to be functional -->
-        <audio controls  #audioPlayer>
+        <audio controls  [src]="question.songSnippetPath" #audioPlayer>
         </audio>
 
         <button class="btn btn-outline-info rounded-pill d-flex align-items-center"
                 (click)="playPlayback()"
                 *ngIf="!answerSelected"
+                [disabled]="isMusicPlayed"
         >
         <span class="play-btn me-4">
 
@@ -26,20 +27,22 @@
       </div>
 
       <div class="border-top mt-3 pt-3">
-        <h2 class="text-center w-100">
+        <h2 class="text-center w-100 d-flex align-items-center">
           Time remaining:
+          <span  class="countdown  m-auto rounded-circle border-white border text-center">
+            {{ countdown }}
+          </span>
         </h2>
         <!-- Countdown timer display -->
-        <div  class="countdown w-25 m-auto rounded-circle border-white border h-auto text-center py-5 h1">
-           {{ countdown }}
-        </div>
+
       </div>
 
       <div class="mt-3 pt-3 border-top" *ngIf="countdown || countdown === 0  ">
+<!--      <div class="mt-3 pt-3 border-top" >-->
         <!-- Options list adjusted to disable removed options -->
         <div class="options row" *ngIf="question.type === 'choice'">
           <button class="rounded-pill btn  btn-outline-light col-6 mt-4 option "
-                  [ngClass]="{'btn-success' : i === selectedAnswer}"
+                  [ngClass]="{'btn-success' : i === selectedAnswer, 'btn-danger' : i === wrongAnswerIndex}"
             *ngFor="let option of question.options; let i = index"
             [disabled]="isOptionRemoved(i)"
             (click)="onOptionSelected(i)">
@@ -60,10 +63,23 @@
 
         <!-- Conditionally show text answer input if it is the text question type -->
         <div *ngIf="question.type === 'text'" class="text-answer">
-          <input type="text" [(ngModel)]="textAnswer" placeholder="Your answer">
-          <button (click)="onTextAnswerSubmit()">Submit Answer</button>
-        </div>
+          <div class="form-text" >
+          <input class="form-control" type="text"
+                 [(ngModel)]="textAnswer" placeholder="Your answer"
+                 [ngClass]="{'bg-danger' : isTextAnswerCorrect === false, 'bg-success' : isTextAnswerCorrect === true}"
+          >
 
+          </div>
+          <button class="d-block btn btn-info score rounded-pill mt-4"
+                  (click)="onTextAnswerSubmit(textAnswer)">Submit</button>
+
+          <h3 *ngIf="isTextAnswerCorrect === true || isTextAnswerCorrect === false">{{question.correctTextAnswer}}</h3>
+
+
+        </div>
+        <button class="d-block btn btn-info score rounded-pill mt-4"
+                *ngIf="isTextAnswerCorrect === true || isTextAnswerCorrect === false"
+                (click)="nextQuestion()">End Game</button>
       </div>
 
     </div>

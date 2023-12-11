@@ -34,6 +34,10 @@ export class QuestionDisplayComponent {
   selectedAnswer: number | null= null;
   isQuestionAnswered: boolean = false;
   isWinOverlayDisplay: boolean = false;
+  wrongAnswerIndex: number | null = null;
+  isTextAnswerCorrect: boolean | null = null;
+  isMusicPlayed: boolean = false;
+
 
   constructor(private audioService: AudioService) {}
 
@@ -47,15 +51,12 @@ export class QuestionDisplayComponent {
 
   ngAfterViewInit() {
     const audio = this.audioPlayer.nativeElement;
-    audio.src = this.question.songSnippetPath;
+    // audio.src = this.question.songSnippetPath;
 
     audio.onloadeddata = () => {
       // audio loaded, can play now
       console.log('loaded');
       audio.currentTime = this.question.startTime;
-
-
-
     }
   }
   startCountdown(duration: number) {
@@ -82,16 +83,14 @@ export class QuestionDisplayComponent {
       this.isWinOverlayDisplay = true;
     } else {
       this.scoreUpdate.emit(0); // Send zero points if wrong answer
+      this.selectedAnswer = this.question.correctOptionIndex as number;
+      this.wrongAnswerIndex = optionIndex;
     }
 
     this.isQuestionAnswered = true;
   }
 
-  onTextAnswerSubmit() {
-    // When user submits their text answer, emit the result
-    this.textAnswerSubmit.emit(this.textAnswer);
-    this.textAnswer = ''; // Clear the textbox after submission
-  }
+
 
   isOptionRemoved(index: number): boolean {
     return this.question.options && this.question.options[index] === null;
@@ -107,11 +106,13 @@ export class QuestionDisplayComponent {
     audio.pause();
     // audio.currentTime = 0; // Reset the playback to the beginning
     // Note: The 'onended' event will trigger here as we pause the audio
-    this.startCountdown(5)
+    if(!this.isQuestionAnswered) {
+      this.startCountdown(30)
+    }
   }
 
   playPlayback() {
-
+    this.isMusicPlayed = true;
     const audio = this.audioPlayer.nativeElement;
 
     audio.play();
@@ -125,9 +126,31 @@ export class QuestionDisplayComponent {
     const audio = this.audioPlayer.nativeElement;
     this.stopPlayback(audio);
     this.nextQuestionEmit.emit();
+    this.resetLevel();
   }
 
   hideWinOverlay() {
     this.isWinOverlayDisplay = false;
+  }
+  resetLevel() {
+    this.isQuestionAnswered = false;
+    this.isWinOverlayDisplay = false;
+    this.answerSelected = false;
+    this.countdown = null;
+    this.textAnswer = '';
+    this.selectedAnswer = null;
+    this.wrongAnswerIndex = null;
+    this.isMusicPlayed = false;
+  }
+
+  onTextAnswerSubmit(answer: string) {
+    if (this.question.type === 'text' &&
+      answer.trim().toLowerCase() === this.question.correctTextAnswer?.trim().toLowerCase()) {
+      this.scoreUpdate.emit(this.question.points);
+      this.isTextAnswerCorrect = true;
+    } else {
+      this.scoreUpdate.emit(0); // Send zero points if wrong answer
+      this.isTextAnswerCorrect = false;
+    }
   }
 }

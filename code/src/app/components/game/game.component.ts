@@ -24,6 +24,7 @@ export class GameComponent {
   questions!: Question[]; // This should be populated with your actual questions data
   currentQuestion!: Question;
   lifelines: boolean[] = [false]; // Tracks which lifelines have been used
+  isGameEnded: boolean = false;
 
   constructor(
     private dataService: DataService
@@ -58,13 +59,6 @@ export class GameComponent {
   }
 
 
-  onAnswerSubmitted(answer: string): void {
-    const currentQuestion = this.questions[this.currentLevel - 1];
-    if (currentQuestion.type === 'text' && answer.trim().toLowerCase() === currentQuestion.correctTextAnswer?.trim().toLowerCase()) {
-      this.score += currentQuestion.points;
-    }
-  }
-
   nextQuestionHandler() {
     this.moveToNextLevel();
   }
@@ -75,7 +69,7 @@ export class GameComponent {
       this.currentLevel++;
       this.currentQuestion = this.questions[this.currentLevel - 1];
     } else {
-      // Handle end of game
+      this.isGameEnded = true;
     }
   }
 

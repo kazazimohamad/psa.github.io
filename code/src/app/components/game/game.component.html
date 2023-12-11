@@ -6,7 +6,7 @@
 
     <div class="d-flex justify-content-between border-bottom">
 
-      <h1 class="">Guess the Song!</h1>
+      <h1 class="">Finish the lyrics!</h1>
 
       <div>
         <div class="lifelines" *ngIf="currentQuestion">
@@ -33,13 +33,22 @@
 
     <!-- Render the question display component -->
     <app-question-display
-      *ngIf="currentQuestion"
+      *ngIf="currentQuestion && !isGameEnded"
       [question]="currentQuestion"
       (scoreUpdate)="updateScore($event)"
-      (textAnswerSubmit)="onAnswerSubmitted($event)"
       (nextQuestionEmit)="nextQuestionHandler()"
     >
     </app-question-display>
+
+    <div class="text-center mt-5 pt-5" *ngIf="isGameEnded">
+      <h1>
+        🎉🎉🎉🎉 Happy Yalda 🎉🎉🎉🎉
+
+      </h1>
+      <h1>
+        Your Last Score : <strong class="px-4 bg-white rounded rounded-pill text-red">{{score}}</strong>
+      </h1>
+    </div>
 
 
     <!-- Displayed when the game ends -->
