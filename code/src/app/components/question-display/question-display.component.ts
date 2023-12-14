@@ -37,6 +37,7 @@ export class QuestionDisplayComponent {
   wrongAnswerIndex: number | null = null;
   isTextAnswerCorrect: boolean | null = null;
   isMusicPlayed: boolean = false;
+  isAudioFileLoaded: boolean = false;
 
 
   constructor(private audioService: AudioService) {}
@@ -57,6 +58,7 @@ export class QuestionDisplayComponent {
       // audio loaded, can play now
       console.log('loaded');
       audio.currentTime = this.question.startTime;
+      this.isAudioFileLoaded = true;
     }
   }
   startCountdown(duration: number) {
@@ -141,6 +143,7 @@ export class QuestionDisplayComponent {
     this.selectedAnswer = null;
     this.wrongAnswerIndex = null;
     this.isMusicPlayed = false;
+    this.isAudioFileLoaded = false;
   }
 
   onTextAnswerSubmit(answer: string) {
