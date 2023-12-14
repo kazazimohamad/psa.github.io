@@ -1,0 +1,70 @@
+{
+  "questions" : [
+
+    {
+      "id": 1,
+      "type": "choice",
+      "songSnippetPath":"/sher-yadet-nare/assets/mp3/2-mp3/2-1.mp3",
+      "startTime": 22,
+      "duration": 59,
+      "lyricsDisplay": ["خوشگلا باید برقصن","خوشگلا باید برقصن", "تو اگه میخوای برات زمستونو بهار کنم "],
+      "options": [
+        "واسه تو از آسمون خوشگلا رو شکار کنم",
+        "واسه تو از آسمون ستاره رو شکار کنم",
+      "واسه تو از آسمون ستاره رو صدا کنم",
+      "واسه تو از آسمون ستاره رو پیدا کنم"],
+      "correctOptionIndex": 1,
+      "correctTextAnswer": "",
+      "points": 5,
+      "lifelineUsed": [false, false, false]
+    },
+    {
+      "id": 2,
+      "type": "choice",
+      "songSnippetPath":"/sher-yadet-nare/assets/mp3/2-mp3/2-2.mp3",
+      "startTime": 0,
+      "duration": 60,
+      "lyricsDisplay": ["ما دو بال پرواز مرغ عشقیم", "پر می گیریم تا اوج آسمونها" , "جای حسرت تو قلب ما دو تا نیست"],
+      "options": [
+        "ما میمونیم بی هم تک و تنها",
+      "نمیشه ما بمونیم تک تنها",
+      "ما می شیم تک تنها توی شبها",
+        "نمیمونیم با غصه تک و تنها"],
+      "correctOptionIndex": 3,
+      "correctTextAnswer": "",
+      "points": 10,
+      "lifelineUsed": [false]
+    },
+    {
+      "id": 3,
+      "type": "choice",
+      "songSnippetPath":"/sher-yadet-nare/assets/mp3/2-mp3/2-3.mp3",
+      "startTime": 20,
+      "duration": 93,
+      "lyricsDisplay": ["بوسه بزن به طاست شاید که شانس بیاره", "بوسه بزن رو لبهام عشقم یه جور قماره" ,"دل بازی گوش تو هردم سازی میگیره"],
+      "options": [
+        "مثله خاجو دل شانس تو رو بازی میگیره",
+        "مثله خاجو دلو پیک تو رو بازی میگیره",
+        "مثله خاجو دل آس تو رو بازی میگیره",
+        "مثله خاجو گل نازی تو رو بازی میگیره"
+      ],
+      "correctOptionIndex": 1,
+      "correctTextAnswer": "",
+      "points": 10,
+      "lifelineUsed": [false]
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "songSnippetPath":"/sher-yadet-nare/assets/mp3/2-mp3/2-4.mp3",
+      "startTime": 32,
+      "duration": 93,
+      "lyricsDisplay":  ["میبینم از مو دوره","تو چشام خواب ندارم"],
+      "options": ["text1"],
+      "correctOptionIndex": 1,
+      "correctTextAnswer": "میکنه چادر بسر همش از مو فراره",
+      "points": 15,
+      "lifelineUsed": [false]
+    }
+  ]
+}

@@ -13,7 +13,7 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getData() {
-    return this.http.get<ResponseData>('assets/data/data.json')
+  getData(jsonFileName: string) {
+    return this.http.get<ResponseData>(`assets/data/${jsonFileName}`)
   }
 }

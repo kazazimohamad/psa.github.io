@@ -1,0 +1,9 @@
+{
+  "/sher-yadet-nare": {
+    "target": "http://localhost:4200",
+    "secure": false,
+    "pathRewrite": {
+      "^/sher-yadet-nare": ""
+    }
+  }
+}

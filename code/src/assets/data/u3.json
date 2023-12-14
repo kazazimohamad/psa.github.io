@@ -1,0 +1,74 @@
+{
+  "questions" : [
+
+    {
+      "id": 1,
+      "type": "choice",
+      "songSnippetPath":"/sher-yadet-nare/assets/mp3/3-mp3/3-1.mp3",
+      "startTime": 0,
+      "duration": 53,
+      "lyricsDisplay": ["یه دل نه صد دل عاشق ", "ولی انگار نه انگار"],
+      "options": [
+        "ولی اصلاً تو انگار که نه انگار که نه انگار",
+        "امون از دست دلدار ، امون از دست دلدار",
+        "ولی انگار نه انگار ، امون از دست دلدار",
+        "امون از دست این دل ، امون از دست دلدار"
+      ],
+      "correctOptionIndex": 3,
+      "correctTextAnswer": "",
+      "points": 5,
+      "lifelineUsed": [false, false, false]
+    },
+    {
+      "id": 2,
+      "type": "choice",
+      "songSnippetPath":"/sher-yadet-nare/assets/mp3/3-mp3/3-2.mp3",
+      "startTime": 0,
+      "duration": 54,
+      "lyricsDisplay": ["امشب که تو پیش منی تو خواب رویایی من", "غرق تماشای توام عشق تماشایی من", "آرامش نگاه تو دلتنگیامو میکشه"],
+      "options": [
+        "کاشکی بیای تو پیش من دلم فقط به این خوشه",
+        "خونه پر از عطر توئه دلم فقط به این خوشه",
+        "دستاتو از من پس نگیر دلم فقط به این خوشه",
+        "خونه همیشه روشنه دلم فقط به این خوشه"
+      ],
+      "correctOptionIndex": 1,
+      "correctTextAnswer": "",
+      "points": 10,
+      "lifelineUsed": [false]
+    },
+    {
+      "id": 3,
+      "type": "choice",
+      "songSnippetPath":"/sher-yadet-nare/assets/mp3/3-mp3/3-3.mp3",
+      "startTime": 0,
+      "duration": 75,
+      "lyricsDisplay": ["پریزاده نشی گم شی نری عزیز مردم شی", "نری سفر ازم دورشی "],
+      "options": [
+        "نری با دشمنام جور شی",
+        "نری دشمن ناجوری شی",
+        "یه وقت وصله ی ناجور شی",
+        "یه وقت دشمن ناجور شی"
+      ],
+      "correctOptionIndex": 0,
+      "correctTextAnswer": "string",
+      "points": 10,
+      "lifelineUsed": [false]
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "songSnippetPath":"/sher-yadet-nare/assets/mp3/3-mp3/3-4.mp3",
+      "startTime": 0,
+      "duration": 96,
+      "lyricsDisplay": ["نمیدونم چرا به گریه های من میخندی", "میبینی تو عذاب دلم چشماتو میبندی"],
+      "options": [
+        "text1"
+      ],
+      "correctOptionIndex": 1,
+      "correctTextAnswer": "تو که کشتی منو با اون دوتا چشم سیاهت",
+      "points": 15,
+      "lifelineUsed": [false]
+    }
+  ]
+}

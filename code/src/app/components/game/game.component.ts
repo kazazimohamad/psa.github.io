@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Question} from "../../core/interfaces/question";
 import {QuestionDisplayComponent} from "../question-display/question-display.component";
 import {NgForOf, NgIf} from "@angular/common";
@@ -26,6 +26,8 @@ export class GameComponent {
   lifelines: boolean[] = [false]; // Tracks which lifelines have been used
   isGameEnded: boolean = false;
 
+  @Input() id!: string;
+
   constructor(
     private dataService: DataService
   ) {
@@ -34,12 +36,13 @@ export class GameComponent {
 
   ngOnInit() {
     this.loadQuestions();
+    console.log(this.id)
   }
   loadQuestions() {
 
     // Load the questions from a JSON file or a service
     // For demonstration purposes, this is just a placeholder
-    this.dataService.getData().subscribe( data => {
+    this.dataService.getData(this.id + '.json').subscribe( data => {
       // In real scenario, it might be loaded from a service
       this.questions = data.questions
       this.currentQuestion = this.questions[this.currentLevel - 1]; // Levels are 1-indexed

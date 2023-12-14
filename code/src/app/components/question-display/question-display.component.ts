@@ -153,4 +153,7 @@ export class QuestionDisplayComponent {
       this.isTextAnswerCorrect = false;
     }
   }
+  get questionWordCount() {
+    return this.question.correctTextAnswer?.split(' ') || [];
+  }
 }

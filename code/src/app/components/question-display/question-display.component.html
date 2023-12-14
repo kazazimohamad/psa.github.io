@@ -68,6 +68,9 @@
                  [(ngModel)]="textAnswer" placeholder="Your answer"
                  [ngClass]="{'bg-danger' : isTextAnswerCorrect === false, 'bg-success' : isTextAnswerCorrect === true}"
           >
+            <div>
+              <span class="border-5 border-bottom border-white d-inline-block mx-2 px-3" *ngFor="let word of questionWordCount">_</span>
+            </div>
 
           </div>
           <button class="d-block btn btn-info score rounded-pill mt-4"
@@ -89,7 +92,7 @@
     <div class="col-6">
       <!-- Shows the lyrics from the current question -->
       <div class="lyrics" >
-        <div *ngFor="let lyric of question.lyricsDisplay">
+        <div *ngFor="let lyric of question.lyricsDisplay" class="mt-5">
           <h3>{{ lyric }}</h3>
         </div>
 

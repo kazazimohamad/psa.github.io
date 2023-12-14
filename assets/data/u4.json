@@ -1,0 +1,72 @@
+{
+  "questions" : [
+
+    {
+      "id": 1,
+      "type": "choice",
+      "songSnippetPath":"/sher-yadet-nare/assets/mp3/4-mp3/4-1.mp3",
+      "startTime": 30,
+      "duration": 46,
+      "lyricsDisplay": ["دیشب مثل هر شب خواب دیدیم که روی آبم", "میون آسمون آسمون رنگین کمون بود"],
+      "options": [
+        "جزیره تا ابد تا ابد بی نشون بود",
+        "واسه پر زدن تا افق یه کهکشون بود",
+        "آسمون عشق مون  عشق مون مثل کهکشون بود",
+        "واسه پرواز عشق تا افق کهکشون بود"
+      ],
+      "correctOptionIndex": 3,
+      "correctTextAnswer": "",
+      "points": 5,
+      "lifelineUsed": [false, false, false]
+    },
+    {
+      "id": 2,
+      "type": "choice",
+      "songSnippetPath":"/sher-yadet-nare/assets/mp3/4-mp3/4-2.mp3",
+      "startTime": 11,
+      "duration": 70,
+      "lyricsDisplay": ["اون شکوه و شکایتو", "اون گوشه و کنایتو" , "حرفای عاشقونتو"],
+      "options": [
+        "یا بوسه های گرم تو",
+        "یا شکوه و شکایتو",
+        "یا خنده های گرم تو",
+        "یا دم به دم بهونتو"
+      ],
+      "correctOptionIndex": 3,
+      "correctTextAnswer": "",
+      "points": 10,
+      "lifelineUsed": [false]
+    },
+    {
+      "id": 3,
+      "type": "choice",
+      "songSnippetPath":"/sher-yadet-nare/assets/mp3/4-mp3/4-3.mp3",
+      "startTime": 0,
+      "duration": 59,
+      "lyricsDisplay": ["حرف عشق من و تو صحبت این و اون می شد", "می شدیم دو تا قناری یا دو تا کفتر عاشق"],
+      "options": [
+        "واسه ی هر چی حسوده می شدیم آینه ی دق",
+        "واسه هر چی عاشقه می شدیم آینه ی دق",
+        "می شدیم لیلی و مجنون می شدیم همیشه عاشق ",
+        "همه جا شونه به شونه می شدیم ما دوتا عاشق"
+      ],
+      "correctOptionIndex": 0,
+      "correctTextAnswer": "string",
+      "points": 10,
+      "lifelineUsed": [false]
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "songSnippetPath":"/sher-yadet-nare/assets/mp3/4-mp3/4-4.mp3",
+      "startTime": 0,
+      "duration": 67,
+      "lyricsDisplay": ["اومدم لیلیت بشم حسابی مجنونت بشم"],
+      "options": ["text3"],
+      "correctOptionIndex": 1,
+      "correctTextAnswer": "خواستم عاشقت کنم خودم پریشونت شدم",
+      "points": 15,
+      "lifelineUsed": [false]
+    }
+  ]
+}
