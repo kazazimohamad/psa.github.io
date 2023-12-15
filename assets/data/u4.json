@@ -45,12 +45,12 @@
       "duration": 59,
       "lyricsDisplay": ["حرف عشق من و تو صحبت این و اون می شد", "می شدیم دو تا قناری یا دو تا کفتر عاشق"],
       "options": [
-        "واسه ی هر چی حسوده می شدیم آینه ی دق",
-        "واسه هر چی عاشقه می شدیم آینه ی دق",
-        "می شدیم لیلی و مجنون می شدیم همیشه عاشق ",
-        "همه جا شونه به شونه می شدیم ما دوتا عاشق"
+        "می شدیم لیلی و مجنون می شدیم شیرین و فرهاد",
+        "می زدیم به قلب تاریخ نمی رفتیم دیگه از یاد",
+        "واسه هرچی حسوده می شدیم آینه ی دق ",
+        "می شدیم لیلی و مجنون می شدیم همیشه عاشق"
       ],
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "correctTextAnswer": "string",
       "points": 10,
       "lifelineUsed": [false]
@@ -60,8 +60,8 @@
       "type": "text",
       "songSnippetPath":"/sher-yadet-nare/assets/mp3/4-mp3/4-4.mp3",
       "startTime": 0,
-      "duration": 67,
-      "lyricsDisplay": ["اومدم لیلیت بشم حسابی مجنونت بشم"],
+      "duration": 66,
+      "lyricsDisplay": ["اومدم لیلیت بشم حسابی مجنونت شدم"],
       "options": ["text3"],
       "correctOptionIndex": 1,
       "correctTextAnswer": "خواستم عاشقت کنم خودم پریشونت شدم",

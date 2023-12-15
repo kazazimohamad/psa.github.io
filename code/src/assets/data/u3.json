@@ -5,16 +5,16 @@
       "id": 1,
       "type": "choice",
       "songSnippetPath":"/sher-yadet-nare/assets/mp3/3-mp3/3-1.mp3",
-      "startTime": 0,
-      "duration": 53,
-      "lyricsDisplay": ["یه دل نه صد دل عاشق ", "ولی انگار نه انگار"],
+      "startTime": 10,
+      "duration": 22,
+      "lyricsDisplay": ["تو میدونی چه کردی با این دل بیقراره", "سرم با دلبری هات ، چقدر بلا آوردی"],
       "options": [
-        "ولی اصلاً تو انگار که نه انگار که نه انگار",
-        "امون از دست دلدار ، امون از دست دلدار",
-        "ولی انگار نه انگار ، امون از دست دلدار",
-        "امون از دست این دل ، امون از دست دلدار"
+        "به عشقت عاشقیمو ، به رسوایی کشیدی",
+        "دل من که نمیرفت به زور اومدی بردی",
+        "دل من رفت و رفتی ، تو هم دنبال نازت",
+        "واسم ای داد و بیداد ، چه خوابا که ندیدی"
       ],
-      "correctOptionIndex": 3,
+      "correctOptionIndex": 1,
       "correctTextAnswer": "",
       "points": 5,
       "lifelineUsed": [false, false, false]
@@ -42,7 +42,7 @@
       "type": "choice",
       "songSnippetPath":"/sher-yadet-nare/assets/mp3/3-mp3/3-3.mp3",
       "startTime": 0,
-      "duration": 75,
+      "duration": 74,
       "lyricsDisplay": ["پریزاده نشی گم شی نری عزیز مردم شی", "نری سفر ازم دورشی "],
       "options": [
         "نری با دشمنام جور شی",
@@ -59,8 +59,8 @@
       "id": 4,
       "type": "text",
       "songSnippetPath":"/sher-yadet-nare/assets/mp3/3-mp3/3-4.mp3",
-      "startTime": 0,
-      "duration": 96,
+      "startTime": 18,
+      "duration": 76,
       "lyricsDisplay": ["نمیدونم چرا به گریه های من میخندی", "میبینی تو عذاب دلم چشماتو میبندی"],
       "options": [
         "text1"
