@@ -48,14 +48,18 @@
       <h1>
         Your Last Score : <strong class="px-4 bg-white rounded rounded-pill text-red">{{score}}</strong>
       </h1>
+
+      <br />
+      <br />
+      <div class="end-of-game" routerLink="/">
+        <h2>Goto Home 👉</h2>
+      </div>
+
     </div>
 
 
-    <!-- Displayed when the game ends -->
-    <div class="end-of-game" *ngIf="questions && currentLevel > questions.length">
-      <p>End of the game! Your final score is {{ score }}.</p>
-      <!-- Optionally, add a button to restart the game -->
-    </div>
+
+
   </div>
 </div>
 

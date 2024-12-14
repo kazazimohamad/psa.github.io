@@ -4,6 +4,7 @@ import {QuestionDisplayComponent} from "../question-display/question-display.com
 import {NgForOf, NgIf} from "@angular/common";
 import {DataService} from "../../services/data.service";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-game',
@@ -12,6 +13,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     QuestionDisplayComponent,
     NgForOf,
     NgIf,
+    RouterLink
   ],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss',
