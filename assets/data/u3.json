@@ -5,16 +5,16 @@
       "id": 1,
       "type": "choice",
       "songSnippetPath":"/sher-yadet-nare/assets/mp3/3-mp3/3-1.mp3",
-      "startTime": 10,
-      "duration": 22,
-      "lyricsDisplay": ["تو میدونی چه کردی که این دل بیقراره", "سرم با دلبری هات ، چقدر بلا آوردی"],
+      "startTime": 22,
+      "duration": 53,
+      "lyricsDisplay": ["شهرام شب ", "بس که غصه تو رو خوردم، بس که هی اسمتو بردم"],
       "options": [
-        "به عشقت عاشقیمو ، به رسوایی کشیدی",
-        "دل من که نمیرفت به زور اومدی بردی",
-        "دل من رفت و رفتی ، تو هم دنبال نازت",
-        "واسم ای داد و بیداد ، چه خوابا که ندیدی"
-      ],
-      "correctOptionIndex": 1,
+        "به هرجایی که رسیدم، یادگاری از تو دیدم",
+        "به هرکسی که رسیدم، دیگه راست راستی بریدم",
+        "به هرجایی که رسیدم، یادگاری از تو چیدم",
+        "به سویی رسیدم، دیگه راست راستی بریدم"
+    ],
+      "correctOptionIndex": 0,
       "correctTextAnswer": "",
       "points": 5,
       "lifelineUsed": [false, false, false]
@@ -23,15 +23,15 @@
       "id": 2,
       "type": "choice",
       "songSnippetPath":"/sher-yadet-nare/assets/mp3/3-mp3/3-2.mp3",
-      "startTime": 0,
-      "duration": 54,
-      "lyricsDisplay": ["امشب که تو پیش منی تو خواب رویایی من", "غرق تماشای توام عشق تماشایی من", "آرامش نگاه تو دلتنگیامو میکشه"],
+      "startTime": 74,
+      "duration": 29,
+      "lyricsDisplay": ["ویگن", "چو خرامی ز تمنا"],
       "options": [
-        "کاشکی بیای تو پیش من دلم فقط به این خوشه",
-        "خونه پر از عطر توئه دلم فقط به این خوشه",
-        "دستاتو از من پس نگیر دلم فقط به این خوشه",
-        "خونه همیشه روشنه دلم فقط به این خوشه"
-      ],
+        " فكنی برق وهوس از دل و جانم",
+        "فکنی برق هوس بر دل و جانم",
+        "ببری برق هوس از دل و جانم",
+        "تو زنی برق هوس بر دل و جانم"
+    ],
       "correctOptionIndex": 1,
       "correctTextAnswer": "",
       "points": 10,
@@ -41,16 +41,16 @@
       "id": 3,
       "type": "choice",
       "songSnippetPath":"/sher-yadet-nare/assets/mp3/3-mp3/3-3.mp3",
-      "startTime": 0,
-      "duration": 74,
-      "lyricsDisplay": ["پریزاده نشی گم شی نری عزیز مردم شی", "نری سفر ازم دورشی "],
+      "startTime": 60,
+      "duration": 30,
+      "lyricsDisplay": ["ستار", "شراب صد ساله تویی، سرخی آلاله تویی"],
       "options": [
-        "نری با دشمنام جور شی",
-        "نری دشمن ناجوری شی",
-        "یه وقت وصله ی ناجور شی",
-        "یه وقت دشمن ناجور شی"
-      ],
-      "correctOptionIndex": 0,
+        "اگه خرابه زندگی اونی که باحاله تویی",
+        "اگه خماره زندگی اونکه سر حاله تویی",
+        " اگه قماره زندگی اونکه نمیبازه تویی",
+        "اگه قماره زندگی اونی که تک خاله تویی"
+    ],
+      "correctOptionIndex": 3,
       "correctTextAnswer": "string",
       "points": 10,
       "lifelineUsed": [false]
@@ -59,14 +59,14 @@
       "id": 4,
       "type": "text",
       "songSnippetPath":"/sher-yadet-nare/assets/mp3/3-mp3/3-4.mp3",
-      "startTime": 18,
-      "duration": 76,
-      "lyricsDisplay": ["نمیدونم چرا به گریه های من میخندی", "میبینی تو عذاب دلم چشماتو میبندی"],
+      "startTime": 30,
+      "duration": 35,
+      "lyricsDisplay": ["نوشافرین ", "حالا ازم رنجیدی، رفتی ازمن بریدی"],
       "options": [
         "text1"
       ],
       "correctOptionIndex": 1,
-      "correctTextAnswer": "تو که کشتی منو با اون دوتا چشم سیاهت",
+      "correctTextAnswer": "دیگه تو قهری با من جوابمو نمیدی",
       "points": 15,
       "lifelineUsed": [false]
     }
