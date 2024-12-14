@@ -24,8 +24,8 @@
       "type": "choice",
       "songSnippetPath":"/sher-yadet-nare/assets/mp3/3-mp3/3-2.mp3",
       "startTime": 74,
-      "duration": 29,
-      "lyricsDisplay": ["ویگن", "چو خرامی ز تمنا"],
+      "duration": 37,
+      "lyricsDisplay": ["ویگن","چو برقصی تو فریبا ببری از دل من تاب وتوانم", "چو خرامی ز تمنا"],
       "options": [
         " فكنی برق وهوس از دل و جانم",
         "فکنی برق هوس بر دل و جانم",
@@ -60,7 +60,7 @@
       "type": "text",
       "songSnippetPath":"/sher-yadet-nare/assets/mp3/3-mp3/3-4.mp3",
       "startTime": 30,
-      "duration": 35,
+      "duration": 34,
       "lyricsDisplay": ["نوشافرین ", "حالا ازم رنجیدی، رفتی ازمن بریدی"],
       "options": [
         "text1"

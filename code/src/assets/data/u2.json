@@ -1,6 +1,6 @@
 {
   "questions" : [
-
+    
     {
       "id": 1,
       "type": "choice",
@@ -24,7 +24,7 @@
       "type": "choice",
       "songSnippetPath":"/sher-yadet-nare/assets/mp3/2-mp3/2-2.mp3",
       "startTime": 34,
-      "duration": 44,
+      "duration": 43,
       "lyricsDisplay": ["لیلا فروهر ", "آخ قربون برم خدا رو، خدای عاشقا رو"],
       "options": [
         "رفتی و بردی ای دل درد گذشته ها رو",
